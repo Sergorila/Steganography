@@ -1,0 +1,11 @@
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.exe
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.deps.json
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.runtimeconfig.json
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.runtimeconfig.dev.json
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.dll
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\bin\Debug\netcoreapp3.1\Coder.pdb
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\obj\Debug\netcoreapp3.1\Coder.csprojAssemblyReference.cache
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfoInputs.cache
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfo.cs
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\obj\Debug\netcoreapp3.1\Coder.dll
+C:\Users\sidorovsa\source\repos\Steganographia\Steganographia\obj\Debug\netcoreapp3.1\Coder.pdb
