@@ -1,0 +1,6 @@
+Coder:
+-m message.txt -c container.txt --stego stegocontainer.txt
+1 -c container.txt --stego stegocontainer.txt
+-c container.txt 1
+
+Decoder:
