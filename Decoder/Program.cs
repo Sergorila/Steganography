@@ -36,31 +36,38 @@ namespace Decoder
                     }
                 }
 
-                if (message == "")
+                if (spath == "")
                 {
                     for (int i = 0; i < lines.Length; i++)
                     {
-                        if (lines[i] != "-c" && lines[i] != "--container" && lines[i] != "-s"
-                            && lines[i] != "--stego" && !lines[i].Contains(".txt"))
+                        if (lines[i] != "-m" && lines[i] != "--message" && !lines[i].Contains(".txt"))
                         {
-                            message = lines[i];
+                            spath = lines[i];
                             break;
                         }
                     }
                 }
+                if (message != "" && spath != "")
+                {
+                    break;
+                }
             }
+
+            Reader r = new Reader(spath, message);
+            r.Decoding();
         }
 
         public static void Help()
         {
-            Console.WriteLine("-m и --message – путь к файлу, содержащему сообщение. Если не указан, то" +
-                "сообщение передаётся через стандартный поток ввода.");
-            Console.WriteLine("-s и --stego – путь по которому нужно записать стегоконтейнер, Если не" +
-                "указан, то результат выводится в стандартный поток вывода.");
-            Console.WriteLine("-c и --container – путь к файлу-контейнеру. Обязательный параметр!");
+            Console.WriteLine("-m и --message – путь к файлу, в который нужно записать сообщение в том" +
+                "виде, в котором оно было до встраивания.Если не указан, то сообщение" +
+                "выводится в стандартный поток вывода.");
+            Console.WriteLine("-s и --stego – путь по которому нужно записать стегоконтейнер, Если не указан, то содержимое" +
+                "стегоконтейнера передаётся через стандартный поток ввода.");
+            Console.WriteLine("-h и --help – вывести справку.");
             Console.WriteLine("Примеры запуска:");
-            Console.WriteLine("-m message.txt -s stegocontainer.txt -c container.txt");
-            Console.WriteLine("-c container.txt < message.txt >");
+            Console.WriteLine("-s stegocontainer.txt --message message.txt");
+            Console.WriteLine("< stegocontainer.txt > message.txt");
         }
     }
 }

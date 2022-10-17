@@ -9,9 +9,11 @@ namespace Decoder
     public class Reader
     {
         private string _stegocontainerPath;
+        private string _message;
 
-        public Reader(string stegocontainerPath)
+        public Reader(string stegocontainerPath, string message)
         {
+            _message = message;
             _stegocontainerPath = stegocontainerPath;
         }
 
@@ -24,7 +26,6 @@ namespace Decoder
                 string input;
                 while((input = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(input);
                     if (input[^1] == ' ')
                     {
                         binaryStr.Append("1");
@@ -38,7 +39,19 @@ namespace Decoder
             string result = binaryStr.ToString();
             var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToArray();
             var str = Encoding.UTF8.GetString(stringArray);
-            Console.WriteLine(str);
+
+            if (_message.Contains(".txt"))
+            {
+                using (StreamWriter sw = new StreamWriter(_message))
+                {
+                    sw.WriteLine(str);
+                }
+            }
+            else
+            {
+                Console.WriteLine(str);
+            }
+            
         }
     }
 }

@@ -4,3 +4,5 @@ Coder:
 -c container.txt 1
 
 Decoder:
+-s stegocontainer.txt --message message.txt
+< stegocontainer.txt > message.txt
