@@ -42,23 +42,21 @@ namespace Coder
             using(StreamReader sr = new StreamReader(_containerPath))
             {
                 string input;
-                for (int i = 0; i < binaryStr.Length; i ++)
+                int k = 0;
+                while ((input = sr.ReadLine()) != null)
                 {
-                    if ((input = sr.ReadLine()) != null)
+                    _lines.Add(input);
+                    if (k < binaryStr.Length && binaryStr[k] == '1')
                     {
-                        _lines.Add(input);
+                        _lines[k] += " ";
+                    }
+                    k++;
+                }
 
-                        if (binaryStr[i] == '1')
-                        {
-                            _lines[i] += " ";
-                        }
-                        
-                    }
-                    else
-                    {
-                        Console.WriteLine("Container hasn't enough lines.");
-                        break;
-                    }
+                if (k < binaryStr.Length)
+                {
+                    Console.WriteLine("Container hasn't enough lines.");
+                    return;
                 }
             }
 

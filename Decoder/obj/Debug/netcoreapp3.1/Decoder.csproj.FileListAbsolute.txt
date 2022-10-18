@@ -1,0 +1,11 @@
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.exe
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.deps.json
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.runtimeconfig.json
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.runtimeconfig.dev.json
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.dll
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.pdb
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.csprojAssemblyReference.cache
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.AssemblyInfoInputs.cache
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.AssemblyInfo.cs
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.dll
+C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.pdb

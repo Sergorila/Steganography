@@ -23,3 +23,14 @@ C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Cod
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.dll
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.pdb
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.genruntimeconfig.cache
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.exe
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.deps.json
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.runtimeconfig.json
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.runtimeconfig.dev.json
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.dll
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.pdb
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.csprojAssemblyReference.cache
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfoInputs.cache
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfo.cs
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.dll
+C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.pdb

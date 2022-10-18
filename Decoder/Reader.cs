@@ -21,21 +21,31 @@ namespace Decoder
         {
             StringBuilder binaryStr = new StringBuilder();
 
-            using(StreamReader sr = new StreamReader(_stegocontainerPath))
+            if (_stegocontainerPath.Contains(".txt"))
             {
-                string input;
-                while((input = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(_stegocontainerPath))
                 {
-                    if (input[^1] == ' ')
+                    string input;
+                    while ((input = sr.ReadLine()) != null)
                     {
-                        binaryStr.Append("1");
-                    }
-                    else
-                    {
-                        binaryStr.Append("0");
+                        if (input[^1] == ' ')
+                        {
+                            binaryStr.Append("1");
+                        }
+                        else
+                        {
+                            binaryStr.Append("0");
+                        }
                     }
                 }
             }
+            else
+            {
+                var lines = _stegocontainerPath.Split("\n");
+
+            }
+
+            
             string result = binaryStr.ToString();
             var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToArray();
             var str = Encoding.UTF8.GetString(stringArray);

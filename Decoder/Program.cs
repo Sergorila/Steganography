@@ -10,44 +10,42 @@ namespace Decoder
             string spath = "";
             while (true)
             {
-                string input = Console.ReadLine();
-                if (input == "-h")
+
+                for (int i = 0; i < args.Length; i++)
                 {
-                    Help();
-                    continue;
-                }
-                var lines = input.Split();
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    switch (lines[i])
+                    switch (args[i])
                     {
+                        case "-h":
+                            Help();
+                            break;
+                        case "--help":
+                            Help();
+                            break;
                         case "-m":
-                            message = lines[i + 1];
+                            message = args[i + 1];
                             break;
                         case "--message":
-                            message = lines[i + 1];
+                            message = args[i + 1];
                             break;
                         case "-s":
-                            spath = lines[i + 1];
+                            spath = args[i + 1];
                             break;
                         case "--stego":
-                            spath = lines[i + 1];
+                            spath = args[i + 1];
                             break;
                     }
                 }
 
                 if (spath == "")
                 {
-                    for (int i = 0; i < lines.Length; i++)
+                    string input;
+                    while((input = Console.ReadLine()) != null)
                     {
-                        if (lines[i] != "-m" && lines[i] != "--message" && !lines[i].Contains(".txt"))
-                        {
-                            spath = lines[i];
-                            break;
-                        }
+                        spath += input;
+                        spath += "\n";
                     }
                 }
-                if (message != "" && spath != "")
+                if (spath != "")
                 {
                     break;
                 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace Coder
 {
@@ -11,54 +13,47 @@ namespace Coder
             string spath = "";
             while (true)
             {
-                string input = Console.ReadLine();
-                if (input == "-h")
+                for (int i = 0; i < args.Length; i++)
                 {
-                    Help();
-                    continue;
-                }
-                var lines = input.Split();
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    switch (lines[i])
+                    switch (args[i])
                     {
+                        case "-h":
+                            Help();
+                            break;
+                        case "--help":
+                            Help();
+                            break;
                         case "-m":
-                            message = lines[i + 1];
+                            message = args[i + 1];
                             break;
                         case "--message":
-                            message = lines[i + 1];
+                            message = args[i + 1];
                             break;
                         case "-s":
-                            spath = lines[i + 1];
+                            spath = args[i + 1];
                             break;
                         case "--stego":
-                            spath = lines[i + 1];
+                            spath = args[i + 1];
                             break;
                         case "-c":
-                            cpath = lines[i + 1];
+                            cpath = args[i + 1];
                             break;
                         case "--container":
-                            cpath = lines[i + 1];
+                            cpath = args[i + 1];
                             break;
                     }
                 }
 
+                
+
                 if (cpath == "")
                 {
                     Console.WriteLine("Путь к контейнеру должен быть указан!");
-                    continue;
+                    return;
                 }
                 if (message == "")
                 {
-                    for (int i = 0; i < lines.Length; i++)
-                    {
-                        if (lines[i] != "-c" && lines[i] != "--container" && lines[i] != "-s"
-                            && lines[i] != "--stego" && !lines[i].Contains(".txt"))
-                        {
-                            message = lines[i];
-                            break;
-                        }
-                    }
+                    message = Console.ReadLine();
                 }
                 if (cpath != "")
                 {
