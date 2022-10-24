@@ -15,7 +15,6 @@ C:\Users\Sergey\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Cod
 C:\Users\Sergey\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.runtimeconfig.dev.json
 C:\Users\Sergey\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.dll
 C:\Users\Sergey\Desktop\Steganography\Steganographia\bin\Debug\netcoreapp3.1\Coder.pdb
-C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.csproj.AssemblyReference.cache
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfoInputs.cache
 C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfo.cs

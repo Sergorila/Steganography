@@ -46,9 +46,12 @@ namespace Coder
                 while ((input = sr.ReadLine()) != null)
                 {
                     _lines.Add(input);
-                    if (k < binaryStr.Length && binaryStr[k] == '1')
+                    if (k < binaryStr.Length)
                     {
-                        _lines[k] += " ";
+                        if (binaryStr[k] == '1')
+                        {
+                            _lines[k] += " ";
+                        }
                     }
                     k++;
                 }

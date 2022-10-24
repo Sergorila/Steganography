@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Decoder
 {
@@ -7,7 +8,7 @@ namespace Decoder
         static void Main(string[] args)
         {
             string message = "";
-            string spath = "";
+            List<string> spath = new List<string>();
             while (true)
             {
 
@@ -28,24 +29,25 @@ namespace Decoder
                             message = args[i + 1];
                             break;
                         case "-s":
-                            spath = args[i + 1];
+                            spath.Add(args[i + 1]);
                             break;
                         case "--stego":
-                            spath = args[i + 1];
+                            spath.Add(args[i + 1]);
                             break;
                     }
                 }
 
-                if (spath == "")
+                if (spath.Count == 0)
                 {
                     string input;
-                    while((input = Console.ReadLine()) != null)
+                    
+                    while((input = Console.ReadLine()) != "")
                     {
-                        spath += input;
-                        spath += "\n";
+                        spath.Add(input); 
                     }
+                    break;
                 }
-                if (spath != "")
+                if (spath[0] != "")
                 {
                     break;
                 }

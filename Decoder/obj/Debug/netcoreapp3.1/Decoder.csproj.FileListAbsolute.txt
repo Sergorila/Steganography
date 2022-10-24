@@ -9,3 +9,16 @@ C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder
 C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.AssemblyInfo.cs
 C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.dll
 C:\Users\sidorovsa\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.pdb
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.exe
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.deps.json
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.runtimeconfig.json
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.runtimeconfig.dev.json
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.dll
+C:\Users\Sergey\Desktop\Steganography\Decoder\bin\Debug\netcoreapp3.1\Decoder.pdb
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.AssemblyInfoInputs.cache
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.AssemblyInfo.cs
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.csproj.CoreCompileInputs.cache
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.dll
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.pdb
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.genruntimeconfig.cache

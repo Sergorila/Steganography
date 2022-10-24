@@ -8,22 +8,22 @@ namespace Decoder
 {
     public class Reader
     {
-        private string _stegocontainerPath;
+        private List<string> _stegocontainerPath;
         private string _message;
 
-        public Reader(string stegocontainerPath, string message)
+        public Reader(List<string> stegocontainerPath, string message)
         {
             _message = message;
-            _stegocontainerPath = stegocontainerPath;
+            _stegocontainerPath = new List<string>(stegocontainerPath);
         }
 
         public void Decoding()
         {
             StringBuilder binaryStr = new StringBuilder();
 
-            if (_stegocontainerPath.Contains(".txt"))
+            if (_stegocontainerPath[0].Contains(".txt"))
             {
-                using (StreamReader sr = new StreamReader(_stegocontainerPath))
+                using (StreamReader sr = new StreamReader(_stegocontainerPath[0]))
                 {
                     string input;
                     while ((input = sr.ReadLine()) != null)
@@ -41,12 +41,32 @@ namespace Decoder
             }
             else
             {
-                var lines = _stegocontainerPath.Split("\n");
-
+                foreach(var item in _stegocontainerPath)
+                {
+                    if (item[^1] == ' ')
+                    {
+                        binaryStr.Append("1");
+                    }
+                    else
+                    {
+                        binaryStr.Append("0");
+                    }
+                }
             }
 
             
             string result = binaryStr.ToString();
+            if (result.Length % 8 != 0)
+            {
+                int len = 0;
+                while (len + 8 <= result.Length)
+                {
+                    len += 7;
+                }
+                result = result.Substring(0, len);
+                Console.WriteLine(result);
+            }
+            
             var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToArray();
             var str = Encoding.UTF8.GetString(stringArray);
 
