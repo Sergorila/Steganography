@@ -12,20 +12,27 @@ namespace Coder
         private string _containerPath;
         private string _stegocontainerPath;
         private List<string> _lines;
+        private byte[] _bytes;
 
         public Writer(string message, string containerPath, string stegocontainerPath)
         {
-            if (message.Contains(".txt"))
+            byte[] bytes;
+            if (message.Length != 0)
             {
-                using (StreamReader sr = new StreamReader(message))
+                using (BinaryReader br = new BinaryReader(File.Open(message, FileMode.Open)))
                 {
-                    _message = sr.ReadToEnd();
+                    bytes = br.ReadBytes(int.MaxValue);
                 }
             }
             else
             {
-                _message = message;
+                using (BinaryReader br = new BinaryReader(Console.OpenStandardInput()))
+                {
+                    bytes = br.ReadBytes(int.MaxValue);
+                }
             }
+
+            _bytes = bytes;
             _containerPath = containerPath;
             _stegocontainerPath = stegocontainerPath;
             _lines = new List<string>();
@@ -34,7 +41,7 @@ namespace Coder
         public void Coding()
         {
             StringBuilder sb = new StringBuilder();
-            foreach (byte b in Encoding.UTF8.GetBytes(_message))
+            foreach (byte b in _bytes)
                 sb.Append(Convert.ToString(b, 2).PadLeft(8, '0'));
 
             string binaryStr = sb.ToString();

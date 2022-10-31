@@ -64,17 +64,20 @@ namespace Decoder
                     len += 7;
                 }
                 result = result.Substring(0, len);
-                Console.WriteLine(result);
             }
             
-            var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToArray();
-            var str = Encoding.UTF8.GetString(stringArray);
+            var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToList();
+            stringArray.RemoveAll(p => p == 0);
+            var str = Encoding.UTF8.GetString(stringArray.ToArray());
 
-            if (_message.Contains(".txt"))
+            if (_message.Length != 0)
             {
-                using (StreamWriter sw = new StreamWriter(_message))
+                using (BinaryWriter bw = new BinaryWriter(File.Open(_message, FileMode.Open)))
                 {
-                    sw.WriteLine(str);
+                    foreach(var b in stringArray)
+                    {
+                        bw.Write(b);
+                    }
                 }
             }
             else
