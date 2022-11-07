@@ -56,19 +56,21 @@ namespace Decoder
 
             
             string result = binaryStr.ToString();
-            if (result.Length % 8 != 0)
-            {
-                int len = 0;
-                while (len + 8 <= result.Length)
-                {
-                    len += 7;
-                }
-                result = result.Substring(0, len);
-            }
-            
+            int len = 0;
             var stringArray = Enumerable.Range(0, result.Length / 8).Select(i => Convert.ToByte(result.Substring(i * 8, 8), 2)).ToList();
-            stringArray.RemoveAll(p => p == 0);
             var str = Encoding.UTF8.GetString(stringArray.ToArray());
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == '$')
+                {
+                    len = i;
+                }
+            }
+
+            str = str.Substring(0, len);
+            stringArray = new List<byte>();
+            stringArray = Encoding.UTF8.GetBytes(str).ToList();
 
             if (_message.Length != 0)
             {

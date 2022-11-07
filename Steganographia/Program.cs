@@ -51,10 +51,6 @@ namespace Coder
                     Console.WriteLine("Путь к контейнеру должен быть указан!");
                     return;
                 }
-                if (message == "")
-                {
-                    message = Console.ReadLine();
-                }
                 if (cpath != "")
                 {
                     break;

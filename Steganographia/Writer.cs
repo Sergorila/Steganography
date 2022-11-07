@@ -12,7 +12,7 @@ namespace Coder
         private string _containerPath;
         private string _stegocontainerPath;
         private List<string> _lines;
-        private byte[] _bytes;
+        private List<byte> _bytes;
 
         public Writer(string message, string containerPath, string stegocontainerPath)
         {
@@ -26,13 +26,11 @@ namespace Coder
             }
             else
             {
-                using (BinaryReader br = new BinaryReader(Console.OpenStandardInput()))
-                {
-                    bytes = br.ReadBytes(int.MaxValue);
-                }
+                string input = Console.ReadLine();
+                bytes = Encoding.UTF8.GetBytes(input);
             }
 
-            _bytes = bytes;
+            _bytes = bytes.ToList();
             _containerPath = containerPath;
             _stegocontainerPath = stegocontainerPath;
             _lines = new List<string>();
@@ -40,6 +38,11 @@ namespace Coder
 
         public void Coding()
         {
+            var stopsymbol = Encoding.UTF8.GetBytes("$");
+            foreach (var b in stopsymbol)
+            {
+                _bytes.Add(b);
+            }
             StringBuilder sb = new StringBuilder();
             foreach (byte b in _bytes)
                 sb.Append(Convert.ToString(b, 2).PadLeft(8, '0'));
