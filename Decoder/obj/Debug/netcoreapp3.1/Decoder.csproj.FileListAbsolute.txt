@@ -22,3 +22,4 @@ C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.cs
 C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.dll
 C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.pdb
 C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.genruntimeconfig.cache
+C:\Users\Sergey\Desktop\Steganography\Decoder\obj\Debug\netcoreapp3.1\Decoder.csproj.AssemblyReference.cache

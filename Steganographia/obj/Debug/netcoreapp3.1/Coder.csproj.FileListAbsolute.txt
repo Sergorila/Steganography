@@ -33,3 +33,4 @@ C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\
 C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.AssemblyInfo.cs
 C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.dll
 C:\Users\sidorovsa\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.pdb
+C:\Users\Sergey\Desktop\Steganography\Steganographia\obj\Debug\netcoreapp3.1\Coder.csproj.AssemblyReference.cache

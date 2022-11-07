@@ -21,7 +21,7 @@ namespace Coder
             {
                 using (BinaryReader br = new BinaryReader(File.Open(message, FileMode.Open)))
                 {
-                    bytes = br.ReadBytes(int.MaxValue);
+                    bytes = br.ReadBytes(int.MaxValue-100);
                 }
             }
             else
